@@ -1,0 +1,14 @@
+<!-- <main (refreshClick)="doRefreshStock()" (addClick)="doAddStock()"> -->
+<main>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <div *ngIf="isAddStockMode">
+        <app-addstock (addStockClick)="trySubscribeToStockName($event)"></app-addstock>
+        <app-showstock [quotes]="quotes" ></app-showstock>
+      </div>
+      <div *ngIf="!isAddStockMode">
+        <app-showstock [quotes]="subscribedQuotes"></app-showstock>
+      </div>
+    </div>
+  </div>
+</main>
