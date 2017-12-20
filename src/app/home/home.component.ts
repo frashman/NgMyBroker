@@ -1,6 +1,7 @@
 import { StockreceiverService } from './../services/stockreceiver.service';
 import { IQuotes, IQuery, IQuote } from './../interfaces/stockapi';
 import { Component, OnInit } from '@angular/core';
+import { CryptoreceiverService } from '../services/cryptoreceiver.service';
 
 @Component({
   selector: 'app-home',
@@ -13,7 +14,7 @@ export class HomeComponent implements OnInit {
   quotes: IQuote[] = [];
   subscribedQuotes: IQuote[] = [];
 
-  constructor(private stockReceiverService: StockreceiverService) { }
+  constructor(private stockReceiverService: CryptoreceiverService) { }
 
   ngOnInit() {
   }

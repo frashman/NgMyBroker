@@ -4,7 +4,7 @@
             <span class="card-title" style="margin-bottom: 0px;">{{ quote.name }}</span>
             <div id="DateTime">{{ quote.lastTradeDate }} + {{ quote.lastTradeTime }}</div>
             <div id="LastTradePrice" class="col s6" style="padding-left: 0;font-size: 22px;">{{ quote.lastTradePriceOnly }}</div>
-            <div id="Change" class="col offset-s2 s2">{{ quote.change }}</div>
+            <div id="Change" class="col offset-s2 s2">{{ quote.change }} {{ quote.currency }}</div>
             <div id="ChangeinPercent" class="col s2">{{ quote.changeinPercent }}</div>
         </div>
         <div class="card-action">
